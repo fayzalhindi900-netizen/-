@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مأكولات أبو العز - Abu Al Ezz Restaurant</title>
+
+<!-- Google Fonts for Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+--bg-main: #f8f5f0; /* Edles Leinen-Beige /
+--bg-card: #ffffff; / Pure White /
+--text-primary: #3a322c; / Warmes Dunkelbraun /
+--text-muted: #786e65; / Sandstein-Graubraun /
+--accent-gold: #c29b38; / Dezent mattes Gold /
+--accent-gold-hover: #a8842c;
+--border-color: #e8e2d8; / Soft Border */
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Tajawal', sans-serif;
+}
+
+body {
+background-color: var(--bg-main);
+color: var(--text-primary);
+line-height: 1.8;
+padding-bottom: 60px;
+}
+
+/* Header Area */
+header {
+text-align: center;
+padding: 50px 20px 40px;
+background: linear-gradient(180deg, #efe8dc 0%, var(--bg-main) 100%);
+border-bottom: 1px solid var(--border-color);
+}
+
+.logo-img {
+width: 120px;
+height: 120px;
+object-fit: cover;
+border-radius: 50%;
+border: 3px solid var(--accent-gold);
+margin-bottom: 15px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.badge-established {
+display: inline-block;
+background-color: #eae1d2;
+color: var(--text-muted);
+font-size: 0.9rem;
+letter-spacing: 1px;
+padding: 5px 18px;
+border-radius: 30px;
+margin-bottom: 12px;
+border: 1px solid #ddd2c1;
+}
+
+h1 {
+font-family: 'Amiri', serif;
+font-size: 2.8rem;
+color: var(--text-primary);
+margin-bottom: 8px;
+font-weight: 700;
+}
+
+.subtitle {
+font-size: 1.15rem;
+color: var(--text-muted);
+max-width: 650px;
+margin: 0 auto 25px;
+font-weight: 400;
+}
+
+/* Action Buttons Section */
+.action-buttons {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 12px 20px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: 500;
+font-size: 0.95rem;
+transition: all 0.3s ease;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.btn-gold {
+background-color: var(--accent-gold);
+color: #ffffff;
+}
+.btn-gold:hover {
+background-color: var(--accent-gold-hover);
+transform: translateY(-2px);
+}
+
+.btn-outline {
+background-color: var(--bg-card);
+color: var(--text-primary);
+border: 1px solid var(--border-color);
+}
+.btn-outline:hover {
+border-color: var(--accent-gold);
+color: var(--accent-gold);
+transform: translateY(-2px);
+}
+
+/* About / Story Section */
+.story-section {
+max-width: 800px;
+margin: 40px auto;
+text-align: center;
+padding: 0 20px;
+}
+
+.story-section h2 {
+font-family: 'Amiri', serif;
+font-size: 2.1rem;
+color: var(--text-primary);
+margin-bottom: 15px;
+}
+
+.story-section p {
+color: var(--text-muted);
+font-size: 1.05rem;
+line-height: 1.9;
+}
+
+.divider {
+width: 60px;
+height: 2px;
+background-color: var(--accent-gold);
+margin: 20px auto;
+opacity: 0.6;
+}
+
+/* Photo Gallery Grid */
+.gallery-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+gap: 22px;
+}
+
+.gallery-card {
+background-color: var(--bg-card);
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+border: 1px solid var(--border-color);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.gallery-card img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+display: block;
+}
+
+.gallery-card-info {
+padding: 16px 20px;
+text-align: center;
+}
+
+.gallery-card-info h3 {
+font-size: 1.1rem;
+color: var(--text-primary);
+font-weight: 500;
+}
+
+/* Footer */
+footer {
+text-align: center;
+margin-top: 60px;
+padding-top: 30px;
+border-top: 1px solid var(--border-color);
+color: var(--text-muted);
+font-size: 0.9rem;
+}
+
+footer .social-icons {
+display: flex;
+justify-content: center;
+gap: 18px;
+margin-bottom: 15px;
+}
+
+footer .social-icons a {
+color: var(--text-muted);
+font-size: 1.3rem;
+transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+color: var(--accent-gold);
+}
+
+@media (max-width: 600px) {
+h1 { font-size: 2.2rem; }
+.gallery-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+<!-- Logo Image -->
+<img src="logo.jpg" alt="شعار مأكولات أبو العز" class="logo-img">
+<br>
+<span class="badge-established">منذ عام 2003</span>
+<h1>مأكولات أبو العز</h1>
+<p class="subtitle">خدمتكم بشغف وطعم أصيل لأكثر من 20 عاماً</p>
+
+<!-- Social & Map Action Buttons -->
+<div class="action-buttons">
+<a href="https://maps.google.com" target="_blank" class="btn btn-gold">
+<i class="fa-solid fa-location-dot"></i> موقعنا على الخريطة
+</a>
+<a href="tel:0940675560" class="btn btn-outline">
+<i class="fa-solid fa-phone"></i> اتصل بنا
+</a>
+<a href="https://facebook.com" target="_blank" class="btn btn-outline">
+<i class="fa-brands fa-facebook-f"></i> فيسبوك
+</a>
+<a href="https://instagram.com" target="_blank" class="btn btn-outline">
+<i class="fa-brands fa-instagram"></i> إنستغرام
+</a>
+</div>
+</header>
+
+<!-- Story / Excellence Section -->
+<section class="story-section">
+<h2>عراقة الطعم والجودة العالية</h2>
+<div class="divider"></div>
+<p>
+منذ عام 2003 ونحن نلتزم بتقديم الأفضل لكم دائماً. نختار أجود المكونات الطازجة يومياً ونحضر وجباتنا بعناية فائقة لنقدم لكم مذاقاً فريداً وتجربة لا تُنسى مع كل وجبة. ثقتكم هي سر استمرارنا ونجاحنا.
+</p>
+</section>
+
+<!-- Photo Gallery -->
+<section class="gallery-container">
+<div class="gallery-grid">
+
+<!-- Image 1: Schawarma Prep -->
+<div class="gallery-card">
+<img src="schawarma1.jpg" alt="تحضير الشاورما الطازجة">
+<div class="gallery-card-info">
+<h3>تحضير الشاورما الشهية والمتبلة</h3>
+</div>
+</div>
+
+<!-- Image 2: Burger Special -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_160124_Instagram.jpg" alt="برغر أبو العز">
+<div class="gallery-card-info">
+<h3>برغر أبو العز المميز</h3>
+</div>
+</div>
+
+<!-- Image 3: Special Offer -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_160325_Facebook.jpg" alt="عروض الوجبات">
+<div class="gallery-card-info">
+<h3>عروض الوجبات والسندويشات</h3>
+</div>
+</div>
+
+<!-- Image 4: Crispy Meals -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_160045_Instagram.jpg" alt="وجبات البروستد والكريسبي">
+<div class="gallery-card-info">
+<h3>وجبات الكريسبي والبروستد المقرمشة</h3>
+</div>
+</div>
+
+<!-- Image 5: Chicken Sandwich -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_160116_Instagram.jpg" alt="سندويش الدجاج المميز">
+<div class="gallery-card-info">
+<h3>سندويشات الدجاج الخاصة</h3>
+</div>
+</div>
+
+<!-- Image 6: Arabi Meal Roll -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_160221_Facebook.jpg" alt="شاورما عربي">
+<div class="gallery-card-info">
+<h3>سندويش الشاورما العربي الأصيل</h3>
+</div>
+</div>
+
+<!-- Image 7: Fries & Dips -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_020550_Facebook.jpg" alt="بطاطا مقلية وصلصات">
+<div class="gallery-card-info">
+<h3>البطاطا الذهبية مع التشكيلة الخاصة من الصلصات</h3>
+</div>
+</div>
+
+<!-- Image 8: Sliced Sandwich Meal -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_152602_Instagram.jpg" alt="وجبة شاورما مقطعة">
+<div class="gallery-card-info">
+<h3>وجبات الشاورما المقطعة مع البطاطا</h3>
+</div>
+</div>
+
+<!-- Image 9: Blessed Friday Greeting -->
+<div class="gallery-card">
+<img src="Screenshot_20261009_152543_Instagram.jpg" alt="جمعة مباركة">
+<div class="gallery-card-info">
+<h3>أجواء ومناسبات مميزة</h3>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+<div class="social-icons">
+<a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://maps.google.com" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+</div>
+<p>جميع الحقوق محفوظة © مأكولات أبو العز 2026</p>
+</footer>
+
+</body>
+</html>
